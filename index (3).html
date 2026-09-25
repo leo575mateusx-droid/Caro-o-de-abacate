@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caroço De Abacate — música, lançamentos, shows e histórias da banda.">
+  <title>Caroço De Abacate — Música que fica</title>
+
+  <!-- Favicon (abacate 🥑 embutido, sem precisar daaaaaaaaaaaaaaa) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥑</text></svg>">
+
+  <!-- Open Graph / compartilhamento em redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Caroço De Abacate — Música que fica">
+  <meta property="og:description" content="Caroço De Abacate — música, lançamentos, shows e histórias da banda.">
+  <meta property="og:image" content="capa.jpg">
+
+  <!-- Fontes: estética inspirada em plataformas musicais modernas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Permanent+Marker&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+  <header id="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <div class="brand-mark">🥑</div>
+        <span>Caroço De Abacate</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#musicas">Músicas</a>
+        <a href="#lancamentos">Lançamentos</a>
+        <a href="#banda">A Banda</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#redes">Redes</a>
+        <a class="nav-pill" href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-art"></div>
+      <div class="hero-orb"></div>
+      <div class="container">
+        <div class="hero-stamp">✦ Arquivo sonoro • Edição especial • Lado A</div>
+        <h1>CAROÇO<br>DE <em>ABACATE</em></h1>
+        <p class="hero-copy">
+          Um universo de música, amizade e imaginação — com a estética de um disco antigo e o caroço no centro de tudo.
+        </p>
+        <div class="scribble" style="right:5%;bottom:12%;transform:rotate(-9deg);">✦ CAROÇO ✦</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#musicas">▶ Ouvir agora</a>
+          <a class="btn btn-dark" href="#banda">Conhecer a banda ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYER -->
+    <div class="container player-wrap">
+      <div class="player">
+        <img id="playerCover" class="player-cover" src="/numeros/11play.png" alt="Capa da faixa atual">
+        <div class="player-center">
+          <small>Now playing</small>
+          <div id="playerTitle" class="player-title" aria-live="polite">Caroço De Abacate</div>
+          <div id="playerArtist" class="player-sub" aria-live="polite">Escolha uma música para começar</div>
+          <div class="progress" id="progress" role="slider" tabindex="0" aria-label="Progresso da música" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+        </div>
+        <button class="play" id="playBtn" aria-label="Tocar música">▶</button>
+      </div>
+      <audio id="audio"></audio>
+    </div>
+
+    <!-- MÚSICAS -->
+    <section id="musicas" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Ouça</div><h2>Faixas que dão play.</h2></div>
+          <p>Como um velho encarte de vinil que ganhou vida: escolha uma faixa, aumente o volume e deixe a história tocar.</p>
+        </div>
+
+        <div class="music-layout">
+          <article class="album-feature">
+            <div class="feature-visual">
+              <img src="/numeros/11play.png" alt="Capa do destaque musical Caroço De Abacate" loading="lazy">
+            </div>
+            <div class="feature-info">
+              <span class="tag">Destaque</span>
+              <h3>O som da casa.</h3>
+              <p>Escolha uma faixa ao lado e deixe o caroço tocar.</p>
+              <button class="btn btn-primary" id="featurePlay">▶ Tocar destaque</button>
+            </div>
+          </article>
+
+          <div class="track-list">
+            <div class="track active" data-file="Musicas- Future- Caroço De Abacate/1- Abacate.mp3" data-title="Abacate" data-cover="album1.jpg">
+              <div class="track-number">01</div>
+              <img class="track-cover" src="/numeros/1n.png" alt="Capa da faixa 01" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Abacate</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 01">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/2- Primeiros Passos.mp3" data-title="Primeiros Passos" data-cover="album1.jpg">
+              <div class="track-number">02</div>
+              <img class="track-cover" src="/numeros/2n.png" alt="Capa da faixa 02" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Primeiros Passos</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 02">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/3- Ao Seu Lado.mp3" data-title="Ao Seu Lado" data-cover="album1.jpg">
+              <div class="track-number">03</div>
+              <img class="track-cover" src="/numeros/3n.png" alt="Capa da faixa 03" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Ao Seu Lado</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 03">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/4- Depois De Nós.mp3" data-title="Depois De Nós" data-cover="album1.jpg">
+              <div class="track-number">04</div>
+              <img class="track-cover" src="/numeros/4n.png" alt="Capa da faixa 04" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Depois De Nós</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 04">▶</button>
+            </div>
+
+            <div class="track" data-file="
+Musicas- Future- Caroço De Abacate/5- Sabores Da Vida.mp3" data-title="Sabores Da Vida" data-cover="album1.jpg">
+              <div class="track-number">05</div>
+              <img class="track-cover" src="/numeros/5n.png" alt="Capa da faixa 05" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Sabores Da Vida</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 05">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/6- Quintal de Ontem A Lírica Do Liricista.mp3" data-title="Quintal de Ontem - A Lírica Do Liricista" data-cover="album1.jpg">
+              <div class="track-number">06</div>
+              <img class="track-cover" src="/numeros/6n.png" alt="Capa da faixa 06" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Quintal de Ontem - A Lírica Do Liricista</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 06">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/7- Entre o Ontem e o Amanhã.mp3" data-title="Entre o Ontem e o Amanhã - Instrumental" data-cover="album1.jpg">
+              <div class="track-number">07</div>
+              <img class="track-cover" src="/numeros/7n.png" alt="Capa da faixa 07" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Entre o Ontem e o Amanhã - Instrumental</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 07">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/8- Saudades Sem Fim- Fotografia Do Tempo.mp3" data-title="Saudades Sem Fim - Fotografia Do Tempo" data-cover="album1.jpg">
+              <div class="track-number">08</div>
+              <img class="track-cover" src="/numeros/8n.png" alt="Capa da faixa 08" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Saudades Sem Fim - Fotografia Do Tempo</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 08">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/9- Futuro Com Você- Além do Abacateiro.mp3" data-title="Futuro Com Você - Além do Abacateiro" data-cover="album1.jpg">
+              <div class="track-number">09</div>
+              <img class="track-cover" src="/numeros/9n.png" alt="Capa da faixa 09" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Futuro Com Você - Além do Abacateiro</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 09">▶</button>
+            </div>
+
+            <div class="track" data-file="Musicas- Future- Caroço De Abacate/10- Teu Nome é Rima- O Cultivador de Histórias.mp3" data-title="Teu Nome é Rima - O Cultivador de Histórias" data-cover="album1.jpg">
+              <div class="track-number">10</div>
+              <img class="track-cover" src="/numeros/10n.png" alt="Capa da faixa 10" loading="lazy">
+              <div class="track-main">
+                <div class="track-name">Teu Nome é Rima - O Cultivador de Histórias</div>
+                <div class="track-meta">Caroço De Abacate • Áudio</div>
+</div>
+              <button class="track-action" aria-label="Tocar faixa 10">▶</button>
+            </div>
+
+            <p style="margin:12px 4px 2px;color:var(--muted);font:11px 'Special Elite';">
+              Clique em uma faixa para tocar. Para colocar as músicas no ar, adicione os arquivos MP3 na pasta <strong>mp3/</strong> do projeto usando os nomes indicados no comentário do código (ex.: <strong>mp3/faixa01.mp3</strong>).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANÇAMENTOS -->
+    <section id="lancamentos" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Discografia</div><h2>Discos do caroço.</h2></div>
+          <p>Lançamentos apresentados como pequenas peças de uma coleção de discos: capas, histórias e sons da banda.</p>
+        </div>
+        <div class="releases">
+          <article class="release"><img src="/Img banda/guacamole.jpeg" alt="Capa do álbum Guacamole" loading="lazy"><div class="r-info"><div class="r-type">Álbum</div><h3>Guacamole</h3><p>2026 • 10 faixas</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDA -->
+    <section id="banda" class="reveal">
+      <div class="container">
+        <div class="band-layout">
+          <div class="story">
+            <div class="kicker">Quem somos</div>
+            <h2>Gente, som<br>e uma boa história.</h2>
+            <p>
+              A Banda caroço de abacate surgiu em meio a ditadura militar em 1975, com seu nome e logo estranho fazendo uma crítica implícita ao modelo rígido e violento dessa época, para censura o nome parece apenas uma piada de estudantes sem nada na cabeça.
+O caroço representa o núcleo da juventude e dos integrantes da banda, a ditadura podia tentar esmagar ou proibir a banda mas o caroço era duro demais pra ser destruído.
+A cor verde do abacate remete ao verde do militarismo em volta do caroço, associando os militares cercando a banda que é o caroço.
+O guacamole representa a mistura do povo, o abacate sozinho era a fachada, o guacamole era o resultado dos shows da banda, o maior medo da ditadura era a união das massas, e ao tentar esmagar os jovens revolucionistas, só fez todo mundo se misturar em uma massa ardente que é o guacamole.
+Usar a comédia de um vegetal e outras faixas com uma historia de amor, fez o publico se sentir confortável e acolhido em meio a uma época tão fria de amor.
+            </p>
+            <p>
+              Mais do que uma página de apresentação, este espaço funciona como uma pequena central da banda:
+              música, integrantes, fotos, lançamentos e contato em um só lugar.
+            </p>
+          </div>
+
+          <div class="members-panel">
+            <div class="members">
+              <article class="member">
+                <img src="Img banda/davi.jpeg" alt="Davi, integrante da banda Caroço De Abacate" loading="lazy">
+                <div>
+                  <strong>Davi</strong>
+                  <span>Baterista</span>
+                </div>
+              </article>
+              <article class="member">
+                <img src="Img banda/felipe.jpeg" alt="Felipe, integrante da banda Caroço De Abacate" loading="lazy">
+                <div>
+                  <strong>Felipe</strong>
+                  <span>Guitarrista</span>
+                </div>
+              </article>
+              <article class="member">
+                <img src="Img banda/joao.jpeg" alt="João, integrante da banda Caroço De Abacate" loading="lazy">
+                <div>
+                  <strong>João</strong>
+                  <span>Guitarrista</span>
+                </div>
+              </article>
+              <article class="member">
+                <img src="Img banda/julia.jpeg" alt="Júlia, integrante da banda Caroço De Abacate" loading="lazy">
+                <div>
+                  <strong>Júlia</strong>
+                  <span>Violinista</span>
+                </div>
+              </article>
+              <article class="member">
+                <img src="Img banda/mayumi.jpeg" alt="Mayumi, integrante da banda Caroço De Abacate" loading="lazy">
+                <div>
+                  <strong>Mayumi</strong>
+                  <span>Vocalista</span>
+                </div>
+              </article>
+              <article class="member">
+                <img src="Img banda/nicolas.jpeg" alt="Nicolas, integrante da banda Caroço De Abacate" loading="lazy">
+                <div>
+                  <strong>Nicolas</strong>
+                  <span>Baixista</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Visual</div><h2>O álbum em imagens.</h2></div>
+          <p>Um mural de memórias, bastidores e momentos da banda.</p>
+        </div>
+        <div class="gallery">
+          <button data-image="Img banda/banda completa.jpeg" aria-label="Ver foto 1 da galeria ampliada"><img src="Img banda/banda completa.jpeg" alt="Foto 1 da banda Caroço De Abacate" loading="lazy"></button>
+          <button data-image="Momentos/momentos1.jpg" aria-label="Ver foto 2 da galeria ampliada"><img src="Momentos/momentos1.jpg" alt="Foto 2 da banda Caroço De Abacate" loading="lazy"></button>
+          <button data-image="Momentos/momentos2.jpg" aria-label="Ver foto 3 da galeria ampliada"><img src="Momentos/momentos2.jpg" alt="Foto 3 da banda Caroço De Abacate" loading="lazy"></button>
+          <button data-image="Momentos/momentos3.jpg" aria-label="Ver foto 4 da galeria ampliada"><img src="Momentos/momentos3.jpg" alt="Foto 4 da banda Caroço De Abacate" loading="lazy"></button>
+          <button data-image="Momentos/momentos4.jpg" aria-label="Ver foto 5 da galeria ampliada"><img src="Momentos/momentos4.jpg" alt="Foto 5 da banda Caroço De Abacate" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- REDES -->
+    <section id="redes" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Conecte</div><h2>Entre no universo.</h2></div>
+        </div>
+        <div class="social-grid">
+          <a class="social-card" href="https://www.instagram.com/skylinebeats_/" target="_blank">
+            <div class="social-icon">◎</div><h3>Instagram</h3><p>Fotos, bastidores e novidades.</p><span>Seguir →</span>
+          </a>
+          <a class="social-card" href="https://open.spotify.com/" target="_blank">
+            <div class="social-icon">◉</div><h3>Spotify</h3><p>Ouça as músicas onde estiver.</p><span>Ouvir →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="reveal">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <div class="kicker">Shows & contato</div>
+            <h2>Quer colocar o Caroço De Abacate no seu palco?</h2>
+            <p>Shows, parcerias, convites e informações: este é o ponto de encontro com a banda.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://wa.me/5511975404000?text=Olá, Lucas Roberto Gutierres! Tudo bem?
+Primeiramente, quero agradecer muito pela sua atenção e pela ajuda.
+Você parece ser um cara muito fofo e bastante receptivo, o que tornou esse contato ainda mais especial.
+Tive a oportunidade de acompanhar um show da banda Caroço de Abacate.
+Foi uma experiência muito interessante e que despertou bastante a minha curiosidade sobre o grupo.
+A apresentação transmite uma energia muito própria e difícil de passar despercebida.
+Percebi uma mistura de referências musicais que dá bastante personalidade à banda.
+Além da música, a identidade visual e a presença de palco também chamam bastante atenção.
+O nome Caroço de Abacate, por si só, já transmite uma ideia diferente e criativa.
+Durante o show, fiquei pensando em como surgiu toda essa proposta.
+Também fiquei curioso para entender melhor a história por trás da formação da banda.
+Por isso, gostaria de conhecer um pouco mais sobre vocês.
+Queria saber como vocês se conheceram e como decidiram formar o grupo.
+Também seria interessante entender de onde veio o nome Caroço de Abacate.
+Tenho curiosidade sobre as principais influências musicais de vocês.
+Gostaria de saber também como vocês trabalham na criação das músicas.
+ As letras são construídas coletivamente ou cada integrante possui uma participação diferente?
+Outra coisa que chamou minha atenção foi a maneira como vocês constroem a identidade da banda.
+Existe uma preocupação em manter uma estética específica nos shows, nas músicas e nas imagens?
+Também gostaria de entender quais são os objetivos da banda para os próximos anos.
+Vocês pretendem lançar novas músicas ou algum projeto maior em breve?
+Queria saber também como vocês enxergam a relação da banda com o público.
+Durante o show, dá para perceber uma conexão muito interessante entre vocês e quem está assistindo.
+Por isso, seria legal conhecer um pouco da visão de vocês sobre essa relação.
+Também tenho curiosidade sobre os desafios de manter uma banda independente atualmente.
+Imagino que exista bastante trabalho envolvido além da parte musical.
+Gostaria de saber como vocês dividem essas responsabilidades entre os integrantes.
+ No geral, o show despertou muita vontade de conhecer melhor a trajetória de vocês.
+Acredito que conversar diretamente com a banda pode revelar detalhes que só quem vive esse projeto conhece.
+Mais uma vez, Lucas, muito obrigado pela atenção, pela disponibilidade e pela ajuda. EU QUERO UM SHOW DO CAROÇO DE ABACATE!" target="_blank" rel="noopener noreferrer">✉ Entrar em contato</a>
+            <a class="btn btn-dark" href="https://www.instagram.com/skylinebeats_/" target="_blank">Instagram ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-line">
+      <span>🥑 CAROÇO DE ABACATE</span>
+      <span>© <span id="year"></span> • FEITO COM CAROÇO, PRA FICAR.</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button class="close" id="closeLightbox" aria-label="Fechar imagem ampliada">×</button>
+    <img id="lightboxImage" src="" alt="Foto ampliada">
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
